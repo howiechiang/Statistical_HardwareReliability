@@ -79,7 +79,7 @@ class TESTLIFEDATA:
 
             # Check that everything is inputted correctly
             for i in range(len(testData)):
-                if testData[i][0] == 0 and testData[i][0] != testData[i][1]:
+                if testData[i][0] == 0 or testData[i][1] == 0 and testData[i][0] != testData[i][1]:
                     print('Please fix data, there are blank sections...')
 
             print('If the table looks correct, please close the Data Entry Table')
@@ -89,7 +89,7 @@ class TESTLIFEDATA:
 
     def setData(self):
 
-
         self.testMedianTimeInterval = [s for s in testData[:,0] if s!= 0]
-        self.testCumulativeFailures = [s for s in testData[:,1] if s!= 0]
-        self.testCumulativeFailures = np.cumsum(self.testCumulativeFailures)
+
+        temp = [s for s in testData[:,1] if s!= 0]
+        self.testCumulativeFailures = np.cumsum(temp)

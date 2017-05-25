@@ -25,9 +25,9 @@ def plotReliabilityAccelLife(testSetup):
     # plt.yscale('symlog')
 
 
-    plt.xlabel('Use Time (Hours)')
-    plt.ylabel('Reliability')
-    plt.title('Reliability Over Time')
+    plt.xlabel('Use Time (Hours)', fontweight='bold')
+    plt.ylabel('Reliability', fontweight='bold')
+    plt.title('Reliability Over Time', fontweight='bold')
     ax.grid(True)
     ax.set_facecolor('#CEE3F6')
 
@@ -91,9 +91,10 @@ def plotWeibull(testLifeData):
     plt.title('Reliability Over Time')
     plt.grid(True)
 
-    plt.xlabel('Time (Hours)')
-    plt.ylabel('Cumulative Probability')
-    plt.title('Weibull MLE Probability (CDF) Plot and Data FIT (Fit=Green, Data= Blue)')
+    plt.xlabel('Time (Hours)', fontweight='bold')
+    plt.ylabel('Cumulative Probability', fontweight='bold')
+    plt.title('Weibull MLE Probability (CDF) Plot and Data FIT \n (Fit=Green, Data=Blue)',
+              fontsize=14, fontweight='bold')
     plt.grid(True)
     # ax.set_facecolor('#CEE3F6')
 
